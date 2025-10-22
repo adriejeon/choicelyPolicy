@@ -1,15 +1,32 @@
-# choicely 개인정보처리방침
+# Choicely 정책 및 공유 페이지
 
-GitHub Pages를 통해 호스팅되는 개인정보처리방침 웹사이트입니다.
+GitHub Pages를 통해 호스팅되는 Choicely 앱의 정책 페이지와 공유 기능을 위한 정적 웹페이지입니다.
 
 ## 파일 구조
 
 ```
-ShootingStartSudokuPolicy/
-├── index.html          # 메인 HTML 파일
-├── style.css           # CSS 스타일시트
-└── README.md           # 프로젝트 설명서
+choicelyPolicy/
+├── index.html              # 개인정보처리방침 메인 페이지
+├── share.html              # 직관 분석 공유 페이지 (썸네일 포함)
+├── share-logical.html      # 논리 분석 공유 페이지 (썸네일 포함)
+├── style.css               # CSS 스타일시트
+└── README.md               # 프로젝트 설명서
 ```
+
+## 공유 기능 설명
+
+### 🎯 목적
+OneLink 무료 플랜에서는 썸네일 이미지를 지원하지 않으므로, 무료로 썸네일이 포함된 공유 기능을 구현하기 위해 링크 래핑 방식을 사용합니다.
+
+### 🔄 동작 원리
+1. **카카오톡 스크래퍼**: `share.html` 페이지를 방문하여 Open Graph 태그를 읽어 썸네일 생성
+2. **사용자 클릭**: 썸네일을 클릭하면 `share.html` 페이지가 열림
+3. **자동 리디렉션**: 0.1초 후 OneLink(`https://onelink.to/6m2v9r`)로 자동 이동
+4. **앱 다운로드**: OneLink가 사용자 OS를 감지하여 적절한 스토어로 이동
+
+### 📱 공유 페이지 종류
+- **직관 분석**: `share.html` - 타로 카드 분석 결과 공유
+- **논리 분석**: `share-logical.html` - 논리적 프레임워크 분석 결과 공유
 
 ## GitHub Pages 설정 방법
 
@@ -17,14 +34,14 @@ ShootingStartSudokuPolicy/
 
 1. GitHub에 로그인
 2. "New repository" 클릭
-3. Repository name: `ShootingStartSudokuPolicy` (또는 원하는 이름)
+3. Repository name: `choicelyPolicy` (또는 원하는 이름)
 4. Public으로 설정
 5. "Create repository" 클릭
 
 ### 2. 파일 업로드
 
 1. 생성된 저장소에서 "uploading an existing file" 클릭
-2. `index.html`, `style.css` 파일을 드래그 앤 드롭
+2. `index.html`, `share.html`, `share-logical.html`, `style.css` 파일을 드래그 앤 드롭
 3. Commit message 작성 후 "Commit changes" 클릭
 
 ### 3. GitHub Pages 활성화
@@ -37,7 +54,18 @@ ShootingStartSudokuPolicy/
 
 ### 4. 사이트 접속
 
-- 몇 분 후 `https://[사용자명].github.io/ShootingStartSudokuPolicy`에서 사이트 확인 가능
+- **개인정보처리방침**: `https://[사용자명].github.io/choicelyPolicy/`
+- **직관 분석 공유**: `https://[사용자명].github.io/choicelyPolicy/share.html`
+- **논리 분석 공유**: `https://[사용자명].github.io/choicelyPolicy/share-logical.html`
+
+### 5. 앱에서 링크 업데이트
+
+앱의 `ShareService`에서 링크를 실제 GitHub Pages URL로 변경하세요:
+
+```dart
+static const String _intuitiveShareLink = 'https://[사용자명].github.io/choicelyPolicy/share.html';
+static const String _logicalShareLink = 'https://[사용자명].github.io/choicelyPolicy/share-logical.html';
+```
 
 ## 커스터마이징
 

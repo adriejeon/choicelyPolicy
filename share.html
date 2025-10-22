@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>Choicely - 당신의 선택은?</title>
+  
+  <!-- 카카오톡 썸네일을 위한 Open Graph 태그 -->
+  <meta property="og:title" content="Choicely - 직관 분석 결과">
+  <meta property="og:description" content="타로 카드로 분석한 당신의 고민! 지금 결과를 확인하세요.">
+  <meta property="og:image" content="https://github.com/adriejeon/choicely/blob/main/web/icons/Icon-192.png?raw=true">
+  <meta property="og:image:width" content="192">
+  <meta property="og:image:height" content="192">
+  <meta property="og:url" content="https://onelink.to/6m2v9r">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Choicely">
+  
+  <!-- Twitter Card 태그 (카카오톡에서도 사용) -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Choicely - 직관 분석 결과">
+  <meta name="twitter:description" content="타로 카드로 분석한 당신의 고민! 지금 결과를 확인하세요.">
+  <meta name="twitter:image" content="https://github.com/adriejeon/choicely/blob/main/web/icons/Icon-192.png?raw=true">
+  
+  <!-- 일반 메타 태그 -->
+  <meta name="description" content="고민 해결을 위한 직관과 논리 분석 앱 - Choicely">
+  <meta name="keywords" content="고민, 선택, 타로, 분석, 직관, 논리, Choicely">
+  <meta name="author" content="Choicely">
+  
+  <!-- 자동 리디렉션 (0.1초 후 OneLink로 이동) -->
+  <meta http-equiv="refresh" content="0.1;url=https://onelink.to/6m2v9r">
+  
+  <!-- 모바일 최적화 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .container {
+      max-width: 400px;
+      padding: 40px 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+    
+    .logo {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 20px;
+      border-radius: 20px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    }
+    
+    h1 {
+      font-size: 24px;
+      margin: 0 0 10px;
+      font-weight: 700;
+    }
+    
+    .subtitle {
+      font-size: 16px;
+      margin: 0 0 30px;
+      opacity: 0.9;
+    }
+    
+    .loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 16px;
+    }
+    
+    .spinner {
+      width: 20px;
+      height: 20px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-top: 2px solid white;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    .redirect-text {
+      margin-top: 20px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+    
+    .manual-link {
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 25px;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+    
+    .manual-link:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://github.com/adriejeon/choicely/blob/main/web/icons/Icon-192.png?raw=true" 
+         alt="Choicely Logo" class="logo">
+    
+    <h1>Choicely</h1>
+    <p class="subtitle">고민 해결을 위한 직관과 논리 분석</p>
+    
+    <div class="loading">
+      <div class="spinner"></div>
+      <span>결과를 확인 중입니다...</span>
+    </div>
+    
+    <p class="redirect-text">
+      잠시 후 앱 다운로드 페이지로 이동합니다.
+    </p>
+    
+    <a href="https://onelink.to/6m2v9r" class="manual-link">
+      수동으로 이동하기
+    </a>
+  </div>
+  
+  <script>
+    // 자동 리디렉션을 위한 JavaScript (백업)
+    setTimeout(function() {
+      window.location.href = 'https://onelink.to/6m2v9r';
+    }, 100);
+    
+    // 페이지 로드 시 로그
+    console.log('Choicely 공유 페이지 로드됨');
+    console.log('OneLink로 리디렉션: https://onelink.to/6m2v9r');
+  </script>
+</body>
+</html>
